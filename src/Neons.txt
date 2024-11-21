@@ -1,0 +1,120 @@
+# Neons.ase
+Created with ColorSlurp
+
+*Cod Gray*
+08080F
+
+*Governor Bay*
+495495
+
+*Blue Bell*
+8B94C6
+
+*Duke Blue*
+0000AF
+
+*Electric Ultramarine*
+4000D6
+
+*Blue*
+1C5BFA
+
+*Munsell Blue*
+0087AF
+
+*Aqua*
+03EDF9
+
+*Faded Cyan*
+8BFFFF
+
+*White*
+FFFFFF
+
+*Gainsboro*
+DDDDDD
+
+*Mountain Mist*
+949494
+
+*Nobel*
+B6B1B1
+
+*Dim Gray*
+6F6868
+
+*Black*
+000000
+
+*Medium Spring Green*
+0BEB99
+
+*Atlantis*
+84DD29
+
+*Inch Worm*
+ADFF56
+
+*Light Slate Blue*
+9466FF
+
+*Perfume*
+D4C2FF
+
+*Gamboge Orange*
+995E00
+
+*Orange Peel*
+FF9E01
+
+*Koromiko*
+FFC466
+
+*Siren*
+740246
+
+*Royal Heath*
+A23779
+
+*Persian Rose*
+FC28A8
+
+*Fuchsia*
+FF00FF
+
+*Rich Brilliant Lavender*
+FFAAFF
+
+*Ebony*
+150621
+
+*Purple*
+5E00AB
+
+*Dark Orchid*
+8A2DC0
+
+*Medium Orchid*
+A34DD5
+
+*Opera Mauve*
+AF87AF
+
+*Red Oxide*
+660C00
+
+*Scarlet*
+FF1E01
+
+*Bittersweet*
+FF7866
+
+*Buttered Rum*
+997A00
+
+*Tangerine*
+FFCC00
+
+*Drover*
+FFEB99
+

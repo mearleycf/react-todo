@@ -1,0 +1,23 @@
+meta {
+  name: Edit Todo
+  type: http
+  seq: 4
+}
+
+patch {
+  url: http://localhost:3001/api/v1/todos/:id
+  body: json
+  auth: none
+}
+
+params:path {
+  id: 1
+}
+
+body:json {
+  {
+    "id": 1,
+    "text": "don't buy groceries",
+    "completed": true
+  }
+}

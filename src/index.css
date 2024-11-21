@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 255 255 255; /* white */
+    --foreground: 8 8 15;      /* codGray */
+
+    --card: 255 255 255;       /* white */
+    --card-foreground: 8 8 15; /* codGray */
+ 
+    --popover: 255 255 255;    /* white */
+    --popover-foreground: 8 8 15; /* codGray */
+ 
+    --primary: 28 91 250;      /* blue */
+    --primary-foreground: 255 255 255; /* white */
+ 
+    --secondary: 139 148 198;  /* blueBell */
+    --secondary-foreground: 8 8 15; /* codGray */
+ 
+    --muted: 221 221 221;     /* gainsboro */
+    --muted-foreground: 111 104 104; /* dimGray */
+ 
+    --accent: 73 84 149;      /* governorBay */
+    --accent-foreground: 255 255 255; /* white */
+ 
+    --destructive: 255 30 1;  /* scarlet */
+    --destructive-foreground: 255 255 255; /* white */
+
+    --border: 221 221 221;    /* gainsboro */
+    --input: 221 221 221;     /* gainsboro */
+    --ring: 28 91 250;        /* blue */
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 8 8 15;     /* codGray */
+    --foreground: 255 255 255; /* white */
+ 
+    --card: 8 8 15;          /* codGray */
+    --card-foreground: 255 255 255; /* white */
+ 
+    --popover: 8 8 15;       /* codGray */
+    --popover-foreground: 255 255 255; /* white */
+ 
+    --primary: 28 91 250;    /* blue */
+    --primary-foreground: 255 255 255; /* white */
+ 
+    --secondary: 73 84 149;  /* governorBay */
+    --secondary-foreground: 255 255 255; /* white */
+ 
+    --muted: 111 104 104;   /* dimGray */
+    --muted-foreground: 221 221 221; /* gainsboro */
+ 
+    --accent: 139 148 198;  /* blueBell */
+    --accent-foreground: 8 8 15; /* codGray */
+ 
+    --destructive: 255 30 1; /* scarlet */
+    --destructive-foreground: 255 255 255; /* white */
+ 
+    --border: 111 104 104;  /* dimGray */
+    --input: 111 104 104;   /* dimGray */
+    --ring: 28 91 250;      /* blue */
+  }
+}
