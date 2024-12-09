@@ -175,3 +175,9 @@ copilot-instructions.md
 
 # TypeDoc generated documentation
 docs/
+
+# Obsidian
+.obsidian/
+
+# vercel auto generated build folder
+.vercel/

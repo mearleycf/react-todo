@@ -16,8 +16,8 @@ When updating this workspace, use these log entry formats:
 - Primary Function: Factory Orchestration and Task Management
 - Authority Level: System-Wide Command
 - Linked Systems:
-  - [[03_WHITEBOARD]]
-  - [[02_TOOLBOX]]
+  - [[02_WHITEBOARD]]
+  - [[03_TOOLBOX]]
   - [[01_ACTIVE_PROJECTS]]
   - All Workbenches [[01_ANALYSIS_BENCH]] [[02_SYNTHESIS_BENCH]] [[03_CREATION_BENCH]] [[04_REVIEW_BENCH]]
 
@@ -37,7 +37,7 @@ When updating this workspace, use these log entry formats:
 
 ### Resource Management
 - Workbench capacity tracking
-- Tool allocation from [[02_TOOLBOX]]
+- Tool allocation from [[03_TOOLBOX]]
 - Project resource balancing
 - System performance monitoring
 
@@ -93,13 +93,13 @@ The internal routing system manages the flow of information between you and AI a
   - Tool and resource requests
   - Capacity updates for different workbenches
   - Documentation of resource usage and effectiveness
-  - Cross-references to [[02_TOOLBOX]] contents
+  - Cross-references to [[03_TOOLBOX]] contents
 
 - Progress Tracking
   - Status updates on ongoing work
   - Completion notifications
   - Integration points between workbenches
-  - References to [[03_WHITEBOARD]] planning
+  - References to [[02_WHITEBOARD]] planning
 
 - Quality Control
   - Review requests and responses
