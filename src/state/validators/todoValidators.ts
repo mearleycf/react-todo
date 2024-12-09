@@ -40,6 +40,24 @@ export function todoListValidator(
   }
 }
 
+function determineTargetState(event: { type: TodoEventType }): TodoStatus {
+  switch (event.type) {
+    case 'START':
+    case 'RESTORE':
+      return 'in progress'
+    case 'COMPLETE':
+      return 'completed'
+    case 'DELETE':
+      return 'deleted'
+    case 'ARCHIVE':
+      return 'archived'
+    case 'RESET':
+      return 'not started'
+    default:
+      throw new Error(`Unknown event type: ${event.type}`)
+  }
+}
+
 export function todoTransitionValidator(
   currentState: TodoState,
   event: { type: TodoEventType },
@@ -73,24 +91,6 @@ export function todoTransitionValidator(
   }
 }
 
-function determineTargetState(event: { type: TodoEventType }): TodoStatus {
-  switch (event.type) {
-    case 'START':
-    case 'RESTORE':
-      return 'in progress'
-    case 'COMPLETE':
-      return 'completed'
-    case 'DELETE':
-      return 'deleted'
-    case 'ARCHIVE':
-      return 'archived'
-    case 'RESET':
-      return 'not started'
-    default:
-      throw new Error(`Unknown event type: ${event.type}`)
-  }
-}
-
 // build validation context factory
 export function createTodoValidationContext(
   currentState: TodoState,
@@ -104,7 +104,7 @@ export function createTodoValidationContext(
   }
 }
 
-export function validationTodoTransition(context: TodoValidationContext): ValidationResult {
+export function validateTodoTransition(context: TodoValidationContext): ValidationResult {
   // 1. validate event matches current state
   const stateValidation = todoTransitionValidator(
     context.currentState,

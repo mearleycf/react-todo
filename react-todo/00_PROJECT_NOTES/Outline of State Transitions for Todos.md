@@ -26,7 +26,6 @@ stateDiagram-v2
   Completed --> Archived: ARCHIVE
 ```
 
-## State Transition Matrix
 
 ## State Transition Matrix
 

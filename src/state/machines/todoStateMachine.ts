@@ -1,5 +1,12 @@
-import { TodoStateMachine, createInitialContext, StateConfig, TodoState, TodoEvent } from '@/types'
-import { createTodoValidationContext, validationTodoTransition } from '../validators/todoValidators'
+import {
+  TodoStateMachine,
+  createInitialContext,
+  StateConfig,
+  TodoState,
+  TodoEvent,
+  TodoStatePrettified,
+} from '@/types'
+import { createTodoValidationContext, validateTodoTransition } from '../validators/todoValidators'
 import { TodoValidationConfig } from '../validators/types'
 
 const initialState: TodoState = {
@@ -38,7 +45,7 @@ const todoGuards = {
     const validationContext = createTodoValidationContext(initialState, event, validationConfig)
 
     // run validation
-    const validationResult = validationTodoTransition(validationContext)
+    const validationResult = validateTodoTransition(validationContext)
 
     // return true only if validation passes and assignedTo is present
     return validationResult.isValid && event.type === 'START' && event.assignedTo.length > 0
@@ -46,9 +53,17 @@ const todoGuards = {
   canCompleteTodo: (event: TodoEvent): boolean => {
     if (event.type !== 'COMPLETE') return false
 
+    const currentState: TodoStatePrettified = {
+      status: 'in progress',
+      todoText: '', // need to set todoText to its current value, not an empty string
+      list: [], // need to set list to its current value, not an empty array
+      modifiedAt: new Date(),
+      restoredAt: undefined,
+    }
+
     const validationContext = createTodoValidationContext(currentState, event, validationConfig)
 
-    const validationResult = validationTodoTransition(validationContext)
+    const validationResult = validateTodoTransition(validationContext)
 
     return validationResult.isValid && event.type === 'COMPLETE' && event.completedBy.length > 0
   },
@@ -57,7 +72,7 @@ const todoGuards = {
 
     const validationContext = createTodoValidationContext(initialState, event, validationConfig)
 
-    const validationResult = validationTodoTransition(validationContext)
+    const validationResult = validateTodoTransition(validationContext)
 
     return (
       validationResult.isValid &&

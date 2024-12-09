@@ -1,5 +1,6 @@
 
 ```mermaid
+%%{init: {'theme':'dark'}}%%
 graph TD
     A[Start: shoppingCart] --> B[Check: Is object?]
     B -->|"Yes"| C[Process object properties]
@@ -38,11 +39,4 @@ graph TD
     
     K -->|"primitive"| K1[Return '123 Main St']
     L -->|"primitive"| L1[Return 'Boston']
-
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style B fill:#bbf,stroke:#333,stroke-width:2px
-    style E1 fill:#bfb,stroke:#333,stroke-width:2px
-    style E5 fill:#fbf,stroke:#333,stroke-width:2px
-    style F fill:#fbf,stroke:#333,stroke-width:2px
-    style I fill:#fbf,stroke:#333,stroke-width:2px
 ```

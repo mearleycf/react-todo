@@ -75,9 +75,9 @@ export type DateProperties<T> = Pick<T, DateKeysOf<T>>
  * Collects all properties from a union type into a single type
  * Example: UnionToIntersection<TodoState> will have all properties from all todo states
  */
-export type UnionToIntersection<U> = (
-  U extends unknown ? (k: U) => void : never
-) extends (k: infer I) => void
+export type UnionToIntersection<U> = (U extends unknown ? (k: U) => void : never) extends (
+  k: infer I
+) => void
   ? I
   : never
 

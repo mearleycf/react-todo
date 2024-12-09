@@ -1,4 +1,4 @@
-import { ExtractPropertyType, MergeUnion } from './utilityTypes'
+import { ExtractPropertyType, Prettify, StringKeysOf, UnionProperties } from './utilityTypes'
 
 // Metadata for duplicated todos
 export type DuplicateMetadata = {
@@ -47,6 +47,8 @@ export type TodoState = TodoNotStarted | TodoInProgress | TodoCompleted | TodoDe
 // Extract the status type from TodoState
 export type TodoStatus = ExtractPropertyType<TodoState, 'status'>
 
+export type TodoStatePrettified = Prettify<TodoState>
+
 // Event types
 export type BaseTodoEvent = {
   timestamp: Date
@@ -84,20 +86,20 @@ export type ResetEvent = BaseTodoEvent & {
   reason?: string
 }
 
-export type TodoEvent = 
-  | StartEvent 
-  | DeleteEvent 
-  | ArchiveEvent 
-  | RestoreEvent 
-  | ResetEvent 
+export type TodoEvent =
+  | StartEvent
+  | DeleteEvent
+  | ArchiveEvent
+  | RestoreEvent
+  | ResetEvent
   | CompleteEvent
 
 // Extract event types from TodoEvent
 export type TodoEventType = ExtractPropertyType<TodoEvent, 'type'>
 
 // Merged properties from unions
-export type AllTodoEventProps = MergeUnion<TodoEvent>
-export type AllTodoStateProps = MergeUnion<TodoState>
+export type AllTodoEventProps = Prettify<TodoEvent>
+export type AllTodoStateProps = Prettify<TodoState>
 
 // Event type mapping
 export type EventTypeMap = {
@@ -118,7 +120,7 @@ export type TodoGuardStringValidation<T extends TodoEventType> = {
 
 export type TodoGuardCustomValidation<T extends TodoEventType> = {
   eventProperty: keyof EventTypeMap[T]
-  stateProperty?: keyof AllTodoStateProps
+  stateProperty?: UnionProperties<TodoState>
   validator: (value: unknown) => boolean
 }
 
@@ -129,14 +131,9 @@ export type TodoGuardValidation<T extends TodoEventType = TodoEventType> =
 export type TodoGuards = {
   [K: string]: {
     eventType: TodoEventType
-    validations: TodoGuardValidation<TodoEventType>[]
+    validations: TodoGuardCustomValidation<TodoEventType>[]
   }
 }
-
-// State machine types
-export type Guard<E> = (event: E) => boolean
-export type Action<E> = (event: E) => void
-export type Target<S> = S | ((state: S) => S)
 
 export type TodoContext = {
   readonly userId: string
@@ -150,4 +147,114 @@ export type TodoError = {
   message: string
   code?: string
   timestamp: Date
+}
+
+// State machine types
+export type Guard<E> = (event: E) => boolean
+export type Action<E> = (event: E) => void
+export type Target<S> = S | ((state: S) => S)
+
+export type StateConfig<S extends TodoState, E extends TodoEvent> = {
+  [Status in TodoStatus]?: {
+    on?: {
+      [EventType in TodoEventType]?: TransitionConfig<S, E>
+    }
+    target: Target<S>
+    action?: Action<E>
+    guard?: Guard<E>
+    onEntry?: () => void
+    onExit?: () => void
+  }
+}
+
+export function createInitialContext(overrides?: Partial<TodoContext>): TodoContext {
+  return {
+    userId: '',
+    todoList: [],
+    currentFilter: 'all',
+    ...overrides,
+  }
+}
+export class TodoStateMachine<S extends TodoState, E extends TodoEvent> {
+  private currentState: S
+  private config: StateConfig<S, E>
+  private context: TodoContext
+  private validationConfig: TodoValidationConfig
+  constructor(
+    initialState: S,
+    config: StateConfig<S, E>,
+    context: TodoContext,
+    validationConfig: TodoValidationConfig
+  ) {
+    this.currentState = initialState
+    this.config = config
+    this.context = context
+    this.validationConfig = validationConfig
+    // validate initial state exists on config
+    if (!this.config[initialState.status]) {
+      throw new Error(`Invalid initial state: ${initialState.status}`)
+    }
+    // call onEntry for initial state
+    const initialStateConfig = this.config[initialState.status]
+    initialStateConfig?.onEntry?.()
+    this.context = createInitialContext()
+  } // end constructor
+  private readonly guardConfigs: TodoGuards = {
+    canStartTodo: {
+      eventType: 'START',
+      validations: [{ eventProperty: 'assignedTo', minLength: 1 }],
+    },
+    canCompleteTodo: {
+      eventType: 'COMPLETE',
+      validations: [{ eventProperty: 'completedBy', minLength: 1 }],
+    },
+  }
+  private createGuardFunction(guardName: string) {
+    const config = this.guardConfigs[guardName]
+    return (event: E): boolean => {
+      if (event.type !== config.eventType) return false
+      const validationContext = createTodoValidationContext(
+        this.currentState,
+        event as EventTypeMap[typeof config.eventType],
+        this.validationConfig
+      )
+      const validationResult = validationTodoTransition(validationContext)
+      if (!validationResult.isValid) return false
+      // Check all configured validations
+      return config.validations.every((validation) => {
+        const typedEvent = event as EventTypeMap[typeof config.eventType]
+        const value = typedEvent[validation.eventProperty]
+        if ('minLength' in validation) {
+          return typeof value === 'string' && value.length >= validation.minLength
+        }
+        if ('validator' in validation) {
+          return validation.validator(value)
+        }
+        return true
+      })
+    }
+  }
+  private todoGuards = Object.fromEntries(
+    Object.keys(this.guardConfigs).map((guardName) => [
+      guardName,
+      this.createGuardFunction(guardName),
+    ])
+  ) as Record<keyof typeof this.guardConfigs, (event: E) => boolean>
+  public transition(event: E): void {
+    const currentState = this.config[this.currentState.status]
+    const targetState = currentState?.on?.[event.type]?.target
+    if (targetState) {
+      const nextState = {
+        ...this.currentState,
+        ...targetState,
+      }
+      this.currentState = nextState
+    }
+  }
+  public getState(): S {
+    return this.currentState
+  }
+  public getContext(): TodoContext {
+    return structuredClone(this.context)
+  }
 }
