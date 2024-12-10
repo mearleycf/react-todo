@@ -141,9 +141,6 @@ This document should provide sufficient context for continuing development of Th
 
 ![[cv6-prompting-evolved-obsidian-as-a-human-to-ai-agent-interface-v0-ghzhs7tzk35e1.webp]]
 
-
-
-
 ### MCP-Obsidian Usage
 * `list_files_in_vault`: Lists all files and directories in the root directory of your Obsidian vault
 * `list_files_in_dir`: Lists all files and directories that exist in a specific Obsidian directory (note: empty directories are not returned)

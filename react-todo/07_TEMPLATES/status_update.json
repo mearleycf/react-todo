@@ -1,0 +1,9 @@
+{
+  "update_id": "<% tp.user.generateUpdateId() %>",
+  "timestamp": "<% tp.date.now('YYYY-MM-DD_HH-mm') %>",
+  "component": "<% tp.user.getComponent() %>",
+  "metrics": "<% tp.user.getMetrics() %>",
+  "recent_changes": [],
+  "alerts": [],
+  "action_items": []
+}
