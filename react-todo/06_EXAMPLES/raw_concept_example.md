@@ -2,7 +2,7 @@
 
 ---
 title: Adaptive Learning System
-creation_date: 2024-01-10
+creation_date: 2024-01-10_14-30
 status: in_progress
 tags: 
   - AI
