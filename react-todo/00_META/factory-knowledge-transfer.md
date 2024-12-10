@@ -10,7 +10,7 @@ The Factory is an advanced knowledge management system that combines Obsidian's 
 
 The Factory is organized into a numbered hierarchy that reflects the natural flow of work and information:
 
-```
+```text
 /THE_FACTORY/
     /01_FOREMAN_OFFICE/       # Command and control center
         [[01_DESK]].md            # Primary workspace
@@ -51,12 +51,12 @@ The Factory is organized into a numbered hierarchy that reflects the natural flo
    - Modification history
    - Internal linking structure
 3. Four workbenches fully implemented:
-	1.    - [[01_ANALYSIS_BENCH]]
-	2. [[02_SYNTHESIS_BENCH]]
-	3. [[03_CREATION_BENCH]]
-	4. [[04_REVIEW_BENCH]]
+   1. [[01_ANALYSIS_BENCH]]
+   2. [[02_SYNTHESIS_BENCH]]
+   3. [[03_CREATION_BENCH]]
+   4. [[04_REVIEW_BENCH]]
 4. Foreman's office started, including:
-	1. [[01_DESK]]
+   1. [[01_DESK]]
 
 ### Core System Features
 
@@ -92,6 +92,7 @@ The Factory is organized into a numbered hierarchy that reflects the natural flo
 ### Project Metaphor
 
 The Factory metaphor is central to understanding this system. Each component represents a part of an industrial operation:
+
 - Workbenches are like specialized manufacturing stations
 - The Foreman's Office provides oversight and direction
 - The Factory Floor is where work gets done
@@ -109,12 +110,12 @@ The Factory metaphor is central to understanding this system. Each component rep
 ### Technical Notes
 
 1. Obsidian's internal linking uses `[[file_path]]` syntax
-	1. Specifically, the link should JUST be to the filename--like `[[02_TOOLBOX]]` for example. 
-	2. Do NOT use a relative-path based format--like `[[/THE_FACTORY/01_FOREMAN_OFFICE/01_DESK]]` because it will link to the incorrect location. 
+1. Specifically, the link should JUST be to the filename--like `[[02_TOOLBOX]]` for example.
+2. Do NOT use a relative-path based format--like `[[/THE_FACTORY/01_FOREMAN_OFFICE/01_DESK]]` because it will link to the incorrect location.
 2. Links automatically update when files are renamed
 3. Template date variables use Templater syntax: `2024-12-10_13-08`
-	1. File Creation Dates: should be `2024-12-09_12-05`
-	2. Modified Dates: Modification dates should be: `2024-12-10_13-08`
+1. File Creation Dates: should be `2024-12-09_12-05`
+2. Modified Dates: Modification dates should be: `2024-12-10_13-08`
 4. Canvas files provide visual organization
 5. Folder and file numbering ensures proper ordering and work flow
 
@@ -157,13 +158,13 @@ The Factory metaphor is central to understanding this system. Each component rep
 
 ### MCP-Obsidian Usage
 
-* `list_files_in_vault`: Lists all files and directories in the root directory of your Obsidian vault
-* `list_files_in_dir`: Lists all files and directories that exist in a specific Obsidian directory (note: empty directories are not returned)
-* `get_file_contents`: Returns the complete content of any specified file in the vault
-* `simple_search`: Performs a basic text search across all files in the vault with customizable context length around matches
-* `patch_content`: Inserts or modifies content in existing notes relative to headings, block references, or frontmatter fields with append/prepend/replace operations
-* `append_content`: Adds content to new or existing files in the vault
-* `complex_search`: Executes advanced searches using JsonLogic queries, supporting pattern matching with 'glob' and 'regexp' operators ^c9v5kg
+- `list_files_in_vault`: Lists all files and directories in the root directory of your Obsidian vault
+- `list_files_in_dir`: Lists all files and directories that exist in a specific Obsidian directory (note: empty directories are not returned)
+- `get_file_contents`: Returns the complete content of any specified file in the vault
+- `simple_search`: Performs a basic text search across all files in the vault with customizable context length around matches
+- `patch_content`: Inserts or modifies content in existing notes relative to headings, block references, or frontmatter fields with append/prepend/replace operations
+- `append_content`: Adds content to new or existing files in the vault
+- `complex_search`: Executes advanced searches using JsonLogic queries, supporting pattern matching with 'glob' and 'regexp' operators ^c9v5kg
 
 ### Embedded Images
 
