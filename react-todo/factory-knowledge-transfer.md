@@ -1,0 +1,233 @@
+# THE FACTORY SYSTEM
+
+## Project Overview and Current Status
+
+### Core Concept
+
+The Factory is an advanced knowledge management system that combines Obsidian's structural capabilities with AI interaction potential. It transforms traditional note-taking into an intelligent workspace where AI can understand and navigate the conceptual architecture of knowledge. The system uses a factory metaphor, with different specialized areas handling different aspects of knowledge work.
+
+### System Architecture
+
+The Factory is organized into a numbered hierarchy that reflects the natural flow of work and information:
+
+```text
+/THE_FACTORY/
+    /01_FOREMAN_OFFICE/       # Command and control center
+        [[01_DESK]].md            # Primary workspace
+        [[02_WHITEBOARD]].md      # Planning and visualization
+        [[03_TOOLBOX]].md         # Resources and utilities
+
+    /02_WORKBENCHES/          # Specialized processing stations
+        [[00_TEMPLATE]].md        # Base template for workbenches
+        [[01_ANALYSIS_BENCH]].md  # Breaking down and understanding
+        [[02_SYNTHESIS_BENCH]].md # Combining and interpreting
+        [[03_CREATION_BENCH]].md  # Generating new content
+        [[04_REVIEW_BENCH]].md    # Evaluation and refinement
+
+    /03_INITIALIZATION/       # System startup and protocols
+        [[01_BOOT]].md           # Initial system configuration
+        [[02_PROTOCOLS]].md      # Operating rules and procedures
+        [[03_AI_ROUTING]].md     # Information flow management
+
+    /04_FACTORY_FLOOR/       # Active work management
+        [[01_ACTIVE_PROJECTS]].md
+        [[02_CURRENT_BUILDS]].md
+        [[03_STATUS_BOARD]].md
+
+    /05_AUTOMATIONS/         # Process automation
+        [[01_SCRIPTS]].md
+        [[02_WORKFLOWS]].md
+        [[03_INTEGRATIONS]].md
+
+    [[FACTORY_LAYOUT.canvas|FACTORY_LAYOUT]]    # Master system visualization
+```
+
+### Current Implementation Status
+
+1. Basic folder structure established with numbered ordering
+2. Initial workbench templates created with:
+   - System initialization parameters
+   - Version control tracking
+   - Modification history
+   - Internal linking structure
+3. Four workbenches fully implemented:
+4. - [[01_ANALYSIS_BENCH]]
+5. [[02_SYNTHESIS_BENCH]]
+6. [[03_CREATION_BENCH]]
+7. [[04_REVIEW_BENCH]]
+8. Foreman's office started, including:
+9. [[01_DESK]]
+
+### Core System Features
+
+1. Version Control System
+
+   - Creation and modification tracking
+   - Standardized change logging
+   - Clear update history
+
+2. Internal Linking
+
+   - Comprehensive cross-referencing
+   - Path-aware link structure
+   - Hierarchical organization
+
+3. Workbench Architecture
+   - Specialized processing areas
+   - Clear input/output channels
+   - Integration protocols
+
+### Key Design Principles
+
+1. Every component has a specific role in the knowledge processing pipeline
+2. Clear paths for information flow between components
+3. Comprehensive version tracking and change management
+4. Rich internal linking for navigation and context
+5. Systematic naming and organization
+
+### Immediate Next Steps
+
+1. Implementation of core operational files in 01_FOREMAN_OFFICE:
+   - Develop [[02_WHITEBOARD]] for planning
+   - Establish [[03_TOOLBOX]] for resources
+
+### Project Metaphor
+
+The Factory metaphor is central to understanding this system. Each component represents a part of an industrial operation:
+
+- Workbenches are like specialized manufacturing stations
+- The Foreman's Office provides oversight and direction
+- The Factory Floor is where work gets done
+- Initialization is like the startup sequence for machinery
+- Automations are like the factory's automated systems
+
+### System Goals
+
+1. Create an environment where AI can understand and navigate knowledge context
+2. Enable rich, multi-dimensional prompting through structural awareness
+3. Transform static notes into an active, intelligent workspace
+4. Maintain clear organization while allowing organic growth
+5. Support both human and AI interaction patterns
+
+### Technical Notes
+
+1. Obsidian's internal linking uses `[[file_path]]` syntax
+1. Specifically, the link should JUST be to the filename--like `[[02_TOOLBOX]]` for example.
+1. Do NOT use a relative-path based format--like `[[/THE_FACTORY/01_FOREMAN_OFFICE/01_DESK]]` because it will link to the incorrect location.
+1. Links automatically update when files are renamed
+1. Template date variables use Templater syntax: `2024-12-10_17-18`
+1. File Creation Dates: should be `2024-12-10_17-18`
+1. Modified Dates: Modification dates should be: `2024-12-10_17-18`
+1. Canvas files provide visual organization
+1. Folder and file numbering ensures proper ordering and work flow
+
+### Current Challenge Points
+
+1. Need to ensure consistent internal linking across all components
+2. Must maintain clear boundaries between workbench responsibilities
+3. Need to balance structure with flexibility
+4. Must consider how AI will interpret and navigate the system
+
+### File Format Standards
+
+### Document Types and Their Formats
+
+1. **Human-Readable Documents (Markdown)**
+
+   - All documentation, guides, and notes
+   - Workbench files
+   - Analysis reports
+   - Concept documents
+   - Any file that needs to be read or edited by humans
+
+2. **System Processing Documents (JSON/YAML)**
+   - Status updates (JSON)
+   - Metrics data (JSON)
+   - Configuration files (YAML)
+   - Any data that needs to be parsed and processed by the factory system
+
+### Format Selection Guidelines
+
+- Use Markdown (.md) when:
+
+  - The content needs to be read or edited by humans
+  - The file contains documentation or explanatory text
+  - The file needs to be rendered nicely in Obsidian
+
+- Use JSON when:
+  - The data needs to be processed by the factory system
+  - The content is highly structured
+  - The data needs to be validated against a schema
+  - The file is primarily for system/AI consumption
+
+### Markdown Formatting Standards
+
+The Factory system follows strict markdown formatting rules based on markdownlint standards:
+
+1. Document Structure
+   - Files should end with a single empty line
+   - No multiple consecutive blank lines
+   - No trailing spaces at end of lines
+   - Use ATX-style headers (# H1, ## H2, etc.)
+   - No emojis in headers or section titles
+
+2. Headers
+   - Must have a space after the # symbols
+   - Should be surrounded by blank lines
+   - Should be properly nested (no skipping levels)
+   - First line should be a top-level header
+   - Must be plain text without emojis or special characters
+
+3. Lists
+   - Must be preceded by a blank line
+   - Must have consistent indentation
+   - Nested lists should be indented by 2 spaces
+   - Must have a space after the list marker (-, *, or number)
+
+4. Code Blocks
+   - Must be surrounded by blank lines
+   - Must specify a language for fenced code blocks
+   - Must use triple backticks (```) for fencing
+   - Indented code blocks should use 4 spaces
+
+5. Links and References
+   - No bare URLs - use proper markdown link syntax
+   - Internal links should use the Obsidian double-bracket format [[link]]
+   - External links should use [text](url) format
+
+6. Emphasis and Styling
+   - Use * or _ for emphasis, but be consistent
+   - Leave spaces around emphasis markers when used in middle of text
+   - No multiple consecutive emphasis markers
+
+7. Tables
+   - Must have header row
+   - Must be preceded by a blank line
+   - Must have proper column alignment markers
+   - Must have consistent column widths
+
+These standards ensure consistency across all Factory documents and improve readability and maintainability.
+
+### MCP-Obsidian Usage
+
+- `list_files_in_vault`: Lists all files and directories in the root directory of your Obsidian vault
+- `list_files_in_dir`: Lists all files and directories that exist in a specific Obsidian directory (note: empty directories are not returned)
+- `get_file_contents`: Returns the complete content of any specified file in the vault
+- `simple_search`: Performs a basic text search across all files in the vault with customizable context length around matches
+- `patch_content`: Inserts or modifies content in existing notes relative to headings, block references, or frontmatter fields with append/prepend/replace operations
+- `append_content`: Adds content to new or existing files in the vault
+- `complex_search`: Executes advanced searches using JsonLogic queries, supporting pattern matching with 'glob' and 'regexp' operators ^c9v5kg
+
+### Embedded Images
+
+![[cv-prompting-evolved-obsidian-as-a-human-to-ai-agent-interface-v0.webp]]
+
+![[cv2-prompting-evolved-obsidian-as-a-human-to-ai-agent-interface-v0-vgmdt2kuk35e1.webp]]
+
+![[cv3-prompting-evolved-obsidian-as-a-human-to-ai-agent-interface-v0-rk3awr9zk35e1.webp]]
+
+![[cv4-prompting-evolved-obsidian-as-a-human-to-ai-agent-interface-v0-qw08dm31l35e1.webp]]
+
+![[cv5-prompting-evolved-obsidian-as-a-human-to-ai-agent-interface-v0-afqo9disk35e1.webp]]
+
+![[cv6-prompting-evolved-obsidian-as-a-human-to-ai-agent-interface-v0-ghzhs7tzk35e1.webp]]
