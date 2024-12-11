@@ -26,7 +26,6 @@ stateDiagram-v2
   Completed --> Archived: ARCHIVE
 ```
 
-
 ## State Transition Matrix
 
 | From\To    | NotStarted | InProgress | Completed | Deleted | Archived |
@@ -36,4 +35,3 @@ stateDiagram-v2
 | Completed  | -          | START      | -         | DELETE  | ARCHIVE  |
 | Deleted    | -          | RESTORE    | -         | -       | -        |
 | Archived   | -          | RESTORE    | -         | DELETE  | -        |
-
