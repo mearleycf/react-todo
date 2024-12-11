@@ -1,19 +1,20 @@
 # Raw Concept: Adaptive Learning System
 
----
-title: Adaptive Learning System
-creation_date: 2024-01-10_14-30
-status: in_progress
+***
+
+title: Adaptive Learning System  
+creation_date: 2024-01-10_14-30  
+status: in_progress  
 tags:
 
 - AI
 - education
-- personalization
-references:
+- personalization  
+  references:
 - [[02_CURRENT_BUILDS/neural_network_implementation]]
 - [[03_TOOLBOX/learning_algorithms]]
 
----
+***
 
 ## Core Concept
 
