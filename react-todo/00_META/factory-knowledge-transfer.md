@@ -110,12 +110,12 @@ The Factory metaphor is central to understanding this system. Each component rep
 ### Technical Notes
 
 1. Obsidian's internal linking uses `[[file_path]]` syntax
-1. Specifically, the link should JUST be to the filename--like `[[02_TOOLBOX]]` for example.
-2. Do NOT use a relative-path based format--like `[[/THE_FACTORY/01_FOREMAN_OFFICE/01_DESK]]` because it will link to the incorrect location.
+   1. Specifically, the link should JUST be to the filename--like `[[02_TOOLBOX]]` for example.
+   2. Do NOT use a relative-path based format--like `[[/THE_FACTORY/01_FOREMAN_OFFICE/01_DESK]]` because it will link to the incorrect location.
 2. Links automatically update when files are renamed
 3. Template date variables use Templater syntax: `2024-12-10_13-08`
-1. File Creation Dates: should be `2024-12-09_12-05`
-2. Modified Dates: Modification dates should be: `2024-12-10_13-08`
+   1. File Creation Dates: should be `2024-12-09_12-05`
+   2. Modified Dates: Modification dates should be: `2024-12-10_13-08`
 4. Canvas files provide visual organization
 5. Folder and file numbering ensures proper ordering and work flow
 

@@ -44,13 +44,16 @@ When updating this workbench, use these log entry formats:
 #### (4.1.1) Source: Raw Concepts and Ideas
 
 - Format:
+
   ```yaml
   type: markdown
   schema: [[02_PROTOCOLS]]/schemas/concept_schema
   version: 1.0
   frontmatter: required
   ```
+
 - Validation:
+
   ```yaml
   required_fields:
     - title
@@ -60,18 +63,22 @@ When updating this workbench, use these log entry formats:
     - tags
     - references
   ```
+
 - Origin: [[02_PROTOCOLS]]/input_standards
 - Processing: [[03_TOOLBOX]]/concept_processor
 
 #### (4.1.2) Source: Knowledge Base Connections
 
 - Format:
+
   ```yaml
   type: json
   schema: [[02_PROTOCOLS]]/schemas/connection_schema
   version: 1.0
   ```
+
 - Validation:
+
   ```yaml
   required_fields:
     - source_id
@@ -82,6 +89,7 @@ When updating this workbench, use these log entry formats:
     - description
     - strength: 1-5
   ```
+
 - Origin: [[03_TOOLBOX]]/knowledge_base
 - Processing: [[03_TOOLBOX]]/connection_mapper
 
@@ -111,15 +119,18 @@ When updating this workbench, use these log entry formats:
 #### (4.3.1) Analysis Reports
 
 - Format:
+
   ```yaml
   type: markdown
   schema: [[02_PROTOCOLS]]/schemas/analysis_schema
   version: 1.0
-  template: [[02_TEMPLATES]]/analysis_report
+  template: [[07_TEMPLATES]]/analysis_report
   ```
+
 - Destination: [[02_SYNTHESIS_BENCH]]
 - Type: Structured analysis reports
 - Template Variables:
+
   ```yaml
   title: <% tp.file.title %>
   date: <% tp.date.now("YYYY-MM-DD") %>
@@ -130,15 +141,18 @@ When updating this workbench, use these log entry formats:
 #### (4.3.2) Concept Documentation
 
 - Format:
+
   ```yaml
   type: markdown
   schema: [[02_PROTOCOLS]]/schemas/concept_doc_schema
   version: 1.0
-  template: [[02_TEMPLATES]]/concept_doc
+  template: [[07_TEMPLATES]]/concept_doc
   ```
+
 - Destination: [[02_CURRENT_BUILDS]]
 - Type: Concept maps
 - Template Variables:
+
   ```yaml
   concept_id: <% tp.user.generateId() %>
   created: <% tp.date.now("YYYY-MM-DD_HH-mm") %>
@@ -146,37 +160,21 @@ When updating this workbench, use these log entry formats:
   status: draft
   ```
 
-#### (4.3.3) Integration Specifications
-
-- Format:
-  ```yaml
-  type: yaml
-  schema: [[02_PROTOCOLS]]/schemas/integration_schema
-  version: 1.0
-  template: [[02_TEMPLATES]]/integration_spec
-  ```
-- Destination: [[02_PROTOCOLS]]/integration_specs
-- Type: Integration recommendations
-- Template Variables:
-  ```yaml
-  spec_id: <% tp.user.generateSpecId() %>
-  timestamp: <% tp.date.now("YYYY-MM-DD_HH-mm") %>
-  priority: low | medium | high
-  status: proposed
-  ```
-
 #### (4.3.4) Status Updates
 
 - Format:
+
   ```yaml
   type: json
   schema: [[02_PROTOCOLS]]/schemas/status_schema
   version: 1.0
-  template: [[02_TEMPLATES]]/status_update
+  template: [[07_TEMPLATES]]/status_update
   ```
+
 - Destination: [[03_STATUS_BOARD]]
 - Type: Action items
 - Template Variables:
+
   ```yaml
   update_id: <% tp.user.generateUpdateId() %>
   timestamp: <% tp.date.now("YYYY-MM-DD_HH-mm") %>
@@ -208,11 +206,11 @@ When updating this workbench, use these log entry formats:
 
 ### (6.1) Current Status
 
-| Component | Status | Threshold | Current |
-|-----------|--------|-----------|----------|
-| System | 🟢 Active | Uptime > 99% | 100% |
-| Processing | 🟡 Optimizing | < 100ms | 120ms |
-| Resources | 🟢 Normal | < 80% usage | 60% |
+| Component  | Status        | Threshold    | Current |
+| ---------- | ------------- | ------------ | ------- |
+| System     | 🟢 Active     | Uptime > 99% | 100%    |
+| Processing | 🟡 Optimizing | < 100ms      | 120ms   |
+| Resources  | 🟢 Normal     | < 80% usage  | 60%     |
 
 ### (6.2) Status Transitions
 
