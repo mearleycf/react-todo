@@ -35,7 +35,7 @@ When updating this workbench, use these log entry formats:
 - AI Access Level: Full Interactive
 - Linked Systems:
   - [[03_TOOLBOX]]
-  - [[02_PROTOCOLS]]
+  - [[02_PROTOCOLS#Concept Mapping]]
   - [[02_SYNTHESIS_BENCH]]
   - [[04_REVIEW_BENCH]]
 
@@ -44,6 +44,8 @@ When updating this workbench, use these log entry formats:
 ### (4.1) Standard Operations
 
 - Pattern Recognition Initialization
+- Knowledge Graph Management
+- Concept Mapping and Analysis
 - Knowledge Base Synchronization
 - Error Detection and Recovery
 - Version Control Management
@@ -121,7 +123,8 @@ optional_fields:
 ### (4.2) Processing Protocols
 
 - Deep pattern analysis → [[02_SYNTHESIS_BENCH#Pattern Recognition]]
-- Conceptual mapping → [[../03_INITIALIZATION/02_PROTOCOLS#Information Flow]]
+- Conceptual mapping → [[../03_INITIALIZATION/02_PROTOCOLS#Concept Mapping]]
+- Knowledge graph traversal → [[../03_INITIALIZATION/02_PROTOCOLS#Navigation Protocols]]
 - Relationship identification → [[02_SYNTHESIS_BENCH#Relationship Analysis]]
 - Knowledge synthesis → [[02_SYNTHESIS_BENCH#Knowledge Integration]]
 
@@ -322,3 +325,9 @@ metrics: <% tp.user.getMetrics() %>
   - Enhanced validation rules
   - Updated context map and resources
   - Aligned with new template standards
+
+- v1.1.2 (2024-12-12_10-38) - Enhanced Concept Mapping Integration [changelog#1.1.2]
+  - Added knowledge graph management operations
+  - Updated protocol links to include concept mapping
+  - Enhanced processing protocols with graph traversal
+  - Added bi-directional linking with Synthesis Bench

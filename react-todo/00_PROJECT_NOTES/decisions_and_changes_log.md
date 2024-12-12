@@ -1,5 +1,32 @@
 # (1) Factory System Decisions and Changes Log
 
+## (1.1) Document Purpose
+
+### (1.1.1) Overview
+
+This document serves as the active record of all significant decisions, changes, and updates made to the Factory system. It captures the context, rationale, and impact of each modification, providing a clear trail of the system's evolution. This living document helps team members understand recent changes, track the decision-making process, and maintain system coherence.
+
+### (1.1.2) Document Protocols
+
+1. Entry Format
+   - Use consistent header numbering (X.Y.Z)
+   - Include timestamp in format: YYYY-MM-DD_HH-mm
+   - Structure entries with Context, Key Decisions, Implementation Notes, Impact, and Next Steps
+   - Maintain proper markdown formatting and linking
+
+2. Change Management
+   - Add new entries at the appropriate section level
+   - Ensure bi-directional linking with related documents
+   - Update version numbers according to semantic versioning
+   - Include all affected components and dependencies
+
+3. Archive Process
+   - Monitor section sizes - maximum 5 date entries per section
+   - When a section exceeds 5 entries, move the oldest entries beyond the 5th most recent
+   - Transfer archived entries to `decisions_archived.md` in the corresponding section
+   - Maintain header structure and formatting during transfer
+   - Add a reference note indicating where the archived entries can be found
+
 ## (2) 00_PROJECT_NOTES
 
 ### (2.1) Project Structure
@@ -138,6 +165,51 @@ This change ensures complete markdownlint compliance and eliminates potential du
 - Update archived decisions log with new header format
 - Verify all internal links still work with new header format
 - Document header numbering requirements in standards
+
+#### (3.1.4) 2024-12-12_10-40 - Concept Mapping Implementation
+
+##### (3.1.4.1) Context
+
+The Factory system needed a comprehensive concept mapping system to enhance AI navigation and knowledge integration capabilities across workbenches.
+
+##### (3.1.4.2) Key Decisions
+
+1. Knowledge Graph Structure
+   - Implemented node types for concepts, relationships, properties, and operations
+   - Established bi-directional relationship requirements
+   - Defined clear mapping rules and documentation standards
+
+2. AI Integration Protocols
+   - Added context understanding mechanisms
+   - Implemented navigation protocols for path traversal
+   - Defined interaction patterns for AI operations
+
+3. Workbench Integration
+   - Enhanced Analysis and Synthesis benches with concept mapping capabilities
+   - Added bi-directional linking between workbenches
+   - Implemented knowledge graph management operations
+
+##### (3.1.4.3) Implementation Notes
+
+1. Protocol Updates
+   - Added concept mapping section to `02_PROTOCOLS.md`
+   - Enhanced AI integration documentation
+   - Implemented workbench integration mappings
+
+2. Workbench Enhancements
+   - Updated Analysis Bench to v1.1.2
+   - Updated Synthesis Bench to v1.1.0
+   - Added knowledge graph operations to both benches
+
+##### (3.1.4.4) Impact
+
+These updates provide a robust framework for AI navigation and knowledge integration across the Factory system, enhancing the system's ability to understand and process complex relationships.
+
+##### (3.1.4.5) Next Steps
+
+- Implement concept mapping in remaining workbenches
+- Enhance AI navigation capabilities
+- Develop additional knowledge graph tools
 
 ## (4) 01_FOREMAN_OFFICE
 
