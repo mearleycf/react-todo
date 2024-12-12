@@ -37,6 +37,7 @@ When updating this workbench, use these log entry formats:
   - [[03_TOOLBOX]]
   - [[02_PROTOCOLS]]
   - [[02_SYNTHESIS_BENCH]]
+  - [[04_REVIEW_BENCH]]
 
 ## (4) Workspace Configuration
 
@@ -119,10 +120,10 @@ optional_fields:
 
 ### (4.2) Processing Protocols
 
-- Deep pattern analysis
-- Conceptual mapping
-- Relationship identification
-- Knowledge synthesis
+- Deep pattern analysis → [[02_SYNTHESIS_BENCH#Pattern Recognition]]
+- Conceptual mapping → [[../03_INITIALIZATION/02_PROTOCOLS#Information Flow]]
+- Relationship identification → [[02_SYNTHESIS_BENCH#Relationship Analysis]]
+- Knowledge synthesis → [[02_SYNTHESIS_BENCH#Knowledge Integration]]
 
 ### (4.3) Output Streams
 
