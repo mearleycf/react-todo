@@ -181,3 +181,7 @@ docs/
 
 # vercel auto generated build folder
 .vercel/
+
+# Windsurf and Cursor AI Rules files ignored
+.windsurfrules
+.cursorrules
