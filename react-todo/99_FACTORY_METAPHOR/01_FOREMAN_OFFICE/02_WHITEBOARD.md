@@ -3,8 +3,8 @@
 ## SYSTEM INITIALIZATION
 
 - Status: Active
-- Created: <% tp.file.creation_date("YYYY-MM-DD_HH-mm") %>
-- Last Modified: <% tp.date.now("YYYY-MM-DD_HH-mm") %>
+- Created: 2024-12-09_12-05
+- Last Modified: 2024-12-13_12-24
 - Context Layer: Planning & Visualization
 
 ## CHANGE LOG TEMPLATES

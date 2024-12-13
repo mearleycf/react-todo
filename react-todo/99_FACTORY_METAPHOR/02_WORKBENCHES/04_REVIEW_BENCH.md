@@ -88,7 +88,7 @@ frontmatter: required
 ```yaml
 required_fields:
   - output_id
-  - created: <% tp.date.now("YYYY-MM-DD_HH-mm") %>
+  - created: 2024-12-13_12-24
   - source_bench: [[01_ANALYSIS_BENCH]]
   - type: analysis | pattern | insight
 optional_fields:
@@ -115,7 +115,7 @@ version: 1.0
 ```yaml
 required_fields:
   - model_id
-  - created: <% tp.date.now("YYYY-MM-DD_HH-mm") %>
+  - created: 2024-12-13_12-24
   - components: []
   - relationships: []
   - status: pending_review
@@ -144,7 +144,7 @@ frontmatter: required
 ```yaml
 required_fields:
   - content_id
-  - created: <% tp.date.now("YYYY-MM-DD_HH-mm") %>
+  - created: 2024-12-13_12-24
   - type: document | code | design | media
   - status: pending_review
 optional_fields:
@@ -174,7 +174,7 @@ template: [[07_TEMPLATES]]/validation_report
 ```yaml
 required_fields:
   - report_id
-  - created: <% tp.date.now("YYYY-MM-DD_HH-mm") %>
+  - created: 2024-12-13_12-24
   - reviewed_item_id
   - status: approved | rejected | needs_revision
 optional_fields:
@@ -202,7 +202,7 @@ template: [[07_TEMPLATES]]/quality_certificate
 ```yaml
 required_fields:
   - certificate_id
-  - created: <% tp.date.now("YYYY-MM-DD_HH-mm") %>
+  - created: 2024-12-13_12-24
   - item_id
   - quality_metrics: {}
   - status: certified | provisional | rejected

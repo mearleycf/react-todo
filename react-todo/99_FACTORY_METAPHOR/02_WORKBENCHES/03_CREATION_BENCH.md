@@ -88,7 +88,7 @@ frontmatter: required
 ```yaml
 required_fields:
   - insight_id
-  - created: <% tp.date.now("YYYY-MM-DD_HH-mm") %>
+  - created: 2024-12-13_12-24
   - source_bench: [[02_SYNTHESIS_BENCH]]
   - status: draft | validated | integrated
 optional_fields:
@@ -115,7 +115,7 @@ version: 1.0
 ```yaml
 required_fields:
   - library_id
-  - created: <% tp.date.now("YYYY-MM-DD_HH-mm") %>
+  - created: 2024-12-13_12-24
   - patterns: []
   - status: active | archived
 optional_fields:
@@ -145,7 +145,7 @@ required_fields:
   - project_id
   - requirements: []
   - priority: low | medium | high
-  - deadline: <% tp.date.now("YYYY-MM-DD") %>
+  - deadline: 2024-12-13
 optional_fields:
   - constraints
   - resources
@@ -173,7 +173,7 @@ template: [[07_TEMPLATES]]/content
 ```yaml
 required_fields:
   - content_id
-  - created: <% tp.date.now("YYYY-MM-DD_HH-mm") %>
+  - created: 2024-12-13_12-24
   - type: document | code | design | media
   - status: draft | review | approved
 optional_fields:
@@ -201,7 +201,7 @@ template: [[07_TEMPLATES]]/creation_report
 ```yaml
 required_fields:
   - report_id
-  - created: <% tp.date.now("YYYY-MM-DD_HH-mm") %>
+  - created: 2024-12-13_12-24
   - project_id
   - status: in_progress | completed | archived
 optional_fields:

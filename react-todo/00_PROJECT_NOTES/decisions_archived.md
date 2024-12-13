@@ -1,83 +1,49 @@
-# (1) Factory System Archived Decisions and Changes
+# Archived Decisions and Changes
 
-## (1.1) Document Purpose
+## (1) 00_MANUAL (Documentation)
 
-### (1.1.1) Overview
+[No archived entries yet]
 
-This document serves as the historical archive for decisions and changes that have been rolled off from the active decisions_and_changes_log.md file. It maintains the complete historical record of the Factory system's evolution, preserving important context and decisions for future reference while keeping the active log focused on recent changes.
+## (2) 00_META (System Metadata)
 
-### (1.1.2) Document Protocols
+[No archived entries yet]
 
-1. Entry Format
-   - Preserve original header numbering and structure
-   - Maintain original timestamps and formatting
-   - Keep all original content including Context, Key Decisions, Implementation Notes, Impact, and Next Steps
-   - Preserve all internal links and references
+## (3) 00_MISCELLANY (Miscellaneous Files)
 
-2. Archive Management
-   - Organize entries chronologically within their original sections
-   - Maintain section hierarchy matching the source document
-   - Preserve all metadata and version information
-   - Add archive timestamp to each transferred entry
+[No archived entries yet]
 
-3. Reference System
-   - Each archived entry should include its original location
-   - Maintain a reference in the active log pointing to archived entries
-   - Preserve the relationship between related entries
-   - Include transfer date and reason for archival
+## (4) 00_PROJECT_NOTES (Project Documentation)
 
-## (1) 00_PROJECT_NOTES
+[No archived entries yet]
 
-### (1.1) Project Structure
+## (5) 01_SYSTEM (Core System Processes)
 
-[No archived entries]
+[No archived entries yet]
 
-### (1.2) Documentation Standards
+## (6) 02_MEMORY (Active Workspace)
 
-[No archived entries]
+[No archived entries yet]
 
-## (2) 00_META
+## (7) 03_APPLICATIONS (Processing Tools)
 
-### (2.1) factory-knowledge-transfer.md
+[No archived entries yet]
 
-[No archived entries]
+## (8) 04_STORAGE (Persistent Storage)
 
-## (3) 01_FOREMAN_OFFICE
+[No archived entries yet]
 
-### (3.1) 01_DESK
+## (9) 05_MONITOR (System Monitoring)
 
-[No archived entries]
+[No archived entries yet]
 
-### (3.2) 02_WHITEBOARD
+## (10) 06_EXAMPLES (Example Code)
 
-[No archived entries]
+[No archived entries yet]
 
-### (3.3) 03_TOOLBOX
+## (11) 07_TEMPLATES (Template Files)
 
-[No archived entries]
+[No archived entries yet]
 
-## (4) 02_WORKBENCHES
+## (12) 99_FACTORY_METAPHOR (Legacy Content)
 
-### (4.1) 00_TEMPLATE
-
-[No archived entries]
-
-### (4.2) 01_ANALYSIS_BENCH
-
-[No archived entries]
-
-### (4.3) 02_SYNTHESIS_BENCH
-
-[No archived entries]
-
-### (4.4) 03_CREATION_BENCH
-
-[No archived entries]
-
-### (4.5) 04_REVIEW_BENCH
-
-[No archived entries]
-
-## (5) 03_STATUS_BOARD
-
-[No archived entries]
+[No archived entries yet]

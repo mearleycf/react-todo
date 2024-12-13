@@ -116,7 +116,7 @@ frontmatter: required
 ```yaml
 required_fields:
   - title
-  - analysis_date: <% tp.date.now("YYYY-MM-DD") %>
+  - analysis_date: 2024-12-13
   - status: draft | reviewed | approved
   - source_bench: [[01_ANALYSIS_BENCH]]
 optional_fields:
@@ -143,7 +143,7 @@ version: 1.0
 ```yaml
 required_fields:
   - pattern_id
-  - created: <% tp.date.now("YYYY-MM-DD_HH-mm") %>
+  - created: 2024-12-13_12-24
   - pattern_type: structural | behavioral | semantic
   - confidence: 0.0-1.0
 optional_fields:
@@ -200,7 +200,7 @@ template: [[07_TEMPLATES]]/knowledge_model
 ```yaml
 required_fields:
   - model_id
-  - created: <% tp.date.now("YYYY-MM-DD_HH-mm") %>
+  - created: 2024-12-13_12-24
   - components: []
   - relationships: []
   - status: draft | reviewed | approved
@@ -229,7 +229,7 @@ template: [[07_TEMPLATES]]/integration_report
 ```yaml
 required_fields:
   - report_id
-  - created: <% tp.date.now("YYYY-MM-DD_HH-mm") %>
+  - created: 2024-12-13_12-24
   - integration_type: pattern | knowledge | system
   - status: draft | reviewed | approved
 optional_fields:

@@ -46,12 +46,14 @@ The Factory is organized into a numbered hierarchy that reflects the natural flo
 
 1. Basic folder structure established with numbered ordering
 2. Initial workbench templates created with:
+
    - System initialization parameters
    - Version control tracking
    - Modification history
    - Internal linking structure
 
 3. Four workbenches implemented with enhanced features:
+
    - [[01_ANALYSIS_BENCH]] - Updated with correct protocol links
    - [[02_SYNTHESIS_BENCH]] - Added detailed methodologies
    - [[03_CREATION_BENCH]] - Added Review Bench integration
@@ -102,25 +104,60 @@ The Factory is organized into a numbered hierarchy that reflects the natural flo
 ### Immediate Next Steps
 
 1. Concept Mapping Integration:
-   - Implement concept mapping in remaining workbenches
-   - Enhance AI navigation capabilities
-   - Develop additional knowledge graph tools
-   - Test bi-directional linking effectiveness
 
-2. Protocol Integration:
+   - Implement concept mapping across all workbenches
+   - Enhance AI navigation capabilities with advanced path traversal
+   - Develop and integrate knowledge graph tools
+   - Test bi-directional linking effectiveness
+   - Implement node types for concepts, relationships, and operations
+
+2. Protocol System Enhancement:
+
    - Add detailed process documentation for key operations
    - Ensure all protocol references use correct relative paths
-   - Verify concept mapping implementation across system
+   - Update protocol documentation with AI interaction patterns
+   - Implement concept mapping protocols across workbenches
 
-3. Link Verification:
+3. System Integration and Verification:
+
    - Complete validation of internal links across all workbenches
    - Verify section references match actual headings
-   - Update any remaining incorrect protocol file references
+   - Test complete knowledge processing pipeline
+   - Ensure bi-directional relationships are properly maintained
+   - Verify concept mapping functionality between components
+
+4. Workbench Standardization:
+
+   - Apply latest documentation standards consistently
+   - Update header numbering system across workbenches
+   - Enhance context preservation mechanisms
+   - Add detailed AI operation documentation for each type
+
+5. User Manual and Documentation:
+   - Create `00_MANUAL` directory for human-focused documentation
+   - Develop comprehensive user guide with:
+     - System overview and architecture diagrams
+     - Detailed folder and file explanations
+     - Processing pipeline visualization
+     - Integration and automation workflows
+     - Best practices and usage examples
+   - Include interactive elements:
+     - Mermaid/D2 diagrams for visual understanding
+     - Cross-references to actual system components
+     - Step-by-step tutorials with real examples
+   - Consider selective enhancement of factory files:
+     - Add contextual documentation where needed
+     - Include explanatory comments for complex sections
+     - Maintain balance between clarity and conciseness
 
 ### Project Metaphor
 
 The Factory metaphor is central to understanding this system. Each component represents a part of an industrial operation:
 
+- The Factory Owner is the end user--the human who uses the system
+- The Factory Owner is the ultimate authority; they oversee the system, its components, and its operations, ensuring its success
+- The Foreman is the AI assistant; they provide guidance and support, and perform agentic operations using the factory system
+- The Foreman is the primary supervisor; they oversee the workbenches and their operations
 - Workbenches are like specialized manufacturing stations
 - The Foreman's Office provides oversight and direction
 - The Factory Floor is where work gets done
@@ -202,67 +239,6 @@ The Factory metaphor is central to understanding this system. Each component rep
   - The content is highly structured
   - The data needs to be validated against a schema
   - The file is primarily for system/AI consumption
-
-### Markdown Formatting Standards
-
-The Factory system follows strict markdown formatting rules based on markdownlint standards:
-
-1. Document Structure
-
-   - Files should end with a single empty line
-   - No multiple consecutive blank lines
-   - No trailing spaces at end of lines
-   - Use ATX-style headers (# H1, ## H2, etc.)
-   - No emojis in headers or section titles
-   - Headers must use numerical prefixes for clear hierarchy:
-
-     - Top-level sections use single numbers: `# (1) Section Name`
-     - Subsections increment per level: `## (1.1) Subsection`
-     - Further nesting continues pattern: `### (1.1.1) Detail`
-     - Within date blocks, add section number: `##### (1.1.1.1) Context`
-     - Numbers should be wrapped in parentheses
-     - A space must follow the closing parenthesis
-
-2. Headers
-
-   - Must have a space after the # symbols
-   - Should be surrounded by blank lines
-   - Should be properly nested (no skipping levels)
-   - First line should be a top-level header
-   - Must be plain text without emojis or special characters
-
-3. Lists
-
-   - Must be preceded by a blank line
-   - Must have consistent indentation
-   - Nested lists should be indented by 2 spaces
-   - Must have a space after the list marker (-, \*, or number)
-
-4. Code Blocks
-
-   - Must be surrounded by blank lines
-   - Must specify a language for fenced code blocks
-   - Must use triple backticks (```) for fencing
-   - Indented code blocks should use 2 spaces
-
-5. Links and References
-
-   - No bare URLs - use proper markdown link syntax
-   - Internal links should use the Obsidian double-bracket format [[link]]
-   - External links should use [text](url) format
-
-6. Emphasis and Styling
-
-   - Use \* or for emphasis
-   - Leave spaces around emphasis markers when used in middle of text
-   - No multiple consecutive emphasis markers
-
-7. Tables
-
-   - Must have header row
-   - Must be preceded by a blank line
-   - Must have proper column alignment markers
-   - Must have consistent column widths
 
 ### MCP-Obsidian Usage
 
