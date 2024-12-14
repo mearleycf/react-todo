@@ -1,99 +1,67 @@
-# THE FACTORY SYSTEM
+# THE COMPUTER SYSTEM
 
-## Project Overview and Current Status
+## (1) Project Overview and Current Status
 
-### Core Concept
+### (1.1) Core Concept
 
-The Factory is an advanced knowledge management system that combines Obsidian's structural capabilities with AI interaction potential. It transforms traditional note-taking into an intelligent workspace where AI can understand and navigate the conceptual architecture of knowledge. The system uses a factory metaphor, with different specialized areas handling different aspects of knowledge work.
+The Human-AI Knowledge Transfer System is a sophisticated computing environment that serves as an intermediary between human users and AI agents. It provides a structured, familiar computing interface that both parties can understand and navigate, facilitating natural interaction and collaboration in software development tasks.
 
-### System Architecture
+### (1.2) System Overview
 
-The Factory is organized into a numbered hierarchy that reflects the natural flow of work and information:
+This knowledge management system transforms traditional documentation and development workflows into an intelligent computing environment where both human users and AI agents can work together effectively through a familiar computer system interface.
 
-```text
-/THE_FACTORY/
-    /01_FOREMAN_OFFICE/       # Command and control center
-        [[01_DESK]].md            # Primary workspace
-        [[02_WHITEBOARD]].md      # Planning and visualization
-        [[03_TOOLBOX]].md         # Resources and utilities
+### (1.3) Implementation Progress
 
-    /02_WORKBENCHES/          # Specialized processing stations
-        [[00_TEMPLATE]].md        # Base template for workbenches
-        [[01_ANALYSIS_BENCH]].md  # Breaking down and understanding
-        [[02_SYNTHESIS_BENCH]].md # Combining and interpreting
-        [[03_CREATION_BENCH]].md  # Generating new content
-        [[04_REVIEW_BENCH]].md    # Evaluation and refinement
+#### (1.3.1) Previous Implementation (Factory Metaphor)
 
-    /03_INITIALIZATION/       # System startup and protocols
-        [[01_BOOT]].md           # Initial system configuration
-        [[02_PROTOCOLS]].md      # Operating rules and procedures
-        [[03_AI_ROUTING]].md     # Information flow management
+- Established basic knowledge processing workflows
+- Created specialized processing areas
+- Implemented version control and documentation standards
+- Developed initial AI interaction patterns
 
-    /04_FACTORY_FLOOR/       # Active work management
-        [[01_ACTIVE_PROJECTS]].md
-        [[02_CURRENT_BUILDS]].md
-        [[03_STATUS_BOARD]].md
+#### (1.3.2) Current Implementation Status
 
-    /05_AUTOMATIONS/         # Process automation
-        [[01_SCRIPTS]].md
-        [[02_WORKFLOWS]].md
-        [[03_INTEGRATIONS]].md
+1. Core Architecture
+   - Created initial directory structure following computer system metaphor
+   - Planned core system components (but not yet implemented)
+   - Initial draft of configuration structure (needs implementation)
 
-    [[FACTORY_LAYOUT.canvas|FACTORY_LAYOUT]]    # Master system visualization
-```
+2. User Interface Layer
+   - Initial documentation of intended interaction patterns
+   - Established markdown formatting standards
+   - Created basic folder structure for user guides
+   - Planning stage for feedback mechanisms
 
-### Current Implementation Status
+3. AI Integration Layer
+   - Initial design concepts for AI interaction
+   - Basic communication framework planned
+   - Processing pipeline concepts drafted
+   - Context management in planning phase
 
-1. Basic folder structure established with numbered ordering
-2. Initial workbench templates created with:
+### (1.4) Core System Features
 
-   - System initialization parameters
-   - Version control tracking
-   - Modification history
-   - Internal linking structure
+#### (1.4.1) User Interface Components
 
-3. Four workbenches implemented with enhanced features:
+- Interactive command processing
+- Documentation management
+- Project organization
+- Error reporting and feedback
 
-   - [[01_ANALYSIS_BENCH]] - Updated with correct protocol links
-   - [[02_SYNTHESIS_BENCH]] - Added detailed methodologies
-   - [[03_CREATION_BENCH]] - Added Review Bench integration
-   - [[04_REVIEW_BENCH]] - Linked to all other benches
+#### (1.4.2) AI Processing Components
 
-4. Protocol system established:
-   - Centralized in `03_INITIALIZATION/02_PROTOCOLS.md`
-   - Referenced consistently across workbenches
-   - Pending concept mapping section addition
+- Context awareness
+- Knowledge graph navigation
+- Multi-step task processing
+- Resource management
 
-### Core System Features
+#### (1.4.3) System Management
 
-1. Version Control System
+- Process scheduling
+- Memory management
+- Storage optimization
+- Performance monitoring
 
-   - Creation and modification tracking
-   - Standardized change logging
-   - Clear update history
-
-2. Internal Linking
-
-   - Comprehensive cross-referencing
-   - Path-aware link structure
-   - Hierarchical organization
-   - Bi-directional relationship mapping
-
-3. Workbench Architecture
-
-   - Specialized processing areas
-   - Clear input/output channels
-   - Integration protocols
-   - Concept mapping capabilities
-
-4. Knowledge Graph System
-
-   - Node-based concept representation
-   - Relationship mapping and traversal
-   - AI navigation protocols
-   - Context preservation mechanisms
-
-### Key Design Principles
+### (1.5) Key Design Principles
 
 1. Every component has a specific role in the knowledge processing pipeline
 2. Clear paths for information flow between components
@@ -101,7 +69,7 @@ The Factory is organized into a numbered hierarchy that reflects the natural flo
 4. Rich internal linking for navigation and context
 5. Systematic naming and organization
 
-### Immediate Next Steps
+### (1.6) Immediate Next Steps
 
 1. Concept Mapping Integration:
 
@@ -150,65 +118,79 @@ The Factory is organized into a numbered hierarchy that reflects the natural flo
      - Include explanatory comments for complex sections
      - Maintain balance between clarity and conciseness
 
-### Project Metaphor
+### (1.7) The User <--> Operating System <--> Computer Hardware Metaphor
 
-The Factory metaphor is central to understanding this system. Each component represents a part of an industrial operation:
+The Computer metaphor is central to understanding this system. Each component represents a part of a modern computer operation:
 
-- The Factory Owner is the end user--the human who uses the system
-- The Factory Owner is the ultimate authority; they oversee the system, its components, and its operations, ensuring its success
-- The Foreman is the AI assistant; they provide guidance and support, and perform agentic operations using the factory system
-- The Foreman is the primary supervisor; they oversee the workbenches and their operations
-- Workbenches are like specialized manufacturing stations
-- The Foreman's Office provides oversight and direction
-- The Factory Floor is where work gets done
-- Initialization is like the startup sequence for machinery
-- Automations are like the factory's automated systems
+- The User is the human operator--the person defining the project, writing the requirements, and interacting with the parts of the system, from ONE side
+- The Artificial Intelligence (AI) is the other operator--it is the parts of the system that are interacting with the user, performing background tasks, generating monitoring data, writing to storage, etc.--ON THE OTHER side. It is, in other words, the operating system
+- The System (01_SYSTEM) is the core that manages all background processes; like an operating system, this is the kernel code that runs in the background; the services, configuration, and other processes that run invisible to the user, but are necessary for the system to function
+- Memory (02_MEMORY) provides workspace for active processing; in other words, it is the RAM of the computer, where the active applications and data are stored while in use
+- Applications (03_APPLICATIONS) handle specific tasks; they are the interfaces between the user and the operating system, that the user can use to perform tasks; each application, just like a computer program, has its own set of instructions, data, and functionality
+- Storage (04_STORAGE) maintains persistent data; in other words, it is the hard drive of the computer, where the data is stored permanently, even after the computer is turned off
+- Activity Monitor (05_MONITOR) oversees system health; it monitors and reports on system performance, resource usage, and system errors, and provides real-time information to the user
 
-### System Goals
+### (1.8) System Goals
 
-1. Create an environment where AI can understand and navigate knowledge context
-2. Enable rich, multi-dimensional prompting through structural awareness
-3. Transform static notes into an active, intelligent workspace
-4. Maintain clear organization while allowing organic growth
-5. Support both human and AI interaction patterns
+1. Define an interactive knowledge processing environment that allows a user to interact with agentic AI assistants in a natural, human-like way, with the end goal of aiding in the development of software
+2. The system should be user-friendly and easy to use, with clear instructions and examples
+3. The system should be able to handle complex tasks and problems, with the ability to break them down into smaller, manageable steps
+4. The system should be able to handle different types of AI assistants, with the ability to switch between them as needed
+5. The system should be able to handle different types of knowledge sources, with the ability to switch between them as needed
+6. The system should be able to self-document, writing its own manuals and guides, writing its own version control, updating logs, etc.
+7. The system needs to take in user input, either through the AI chat interface or through information documented inside the system documentation, and process it through the correct internal processes and applications, in order to produce the appropriate outputs--code, documentation, logging, error handling, etc.
+8. The system should be able to perform complex tasks that may require multiple steps, and multiple passes of processing through the system, in order to produce the desired results
+9. The system should be able to handle errors and exceptions, with the ability to log them, and provide clear instructions for fixing them
+10. The system should be able to communicate with the user regarding its progress and results, with the ability to provide clear instructions for the user to follow
+11. The system should be able to obtain information from 3rd party sources, such as the internet, databases, APIs, etc., with the ability to handle errors and exceptions, and provide clear instructions for fixing them
+12. The system should be smart enough to interpret user instruction and ask any necessary questions before it starts processing
 
-### Technical Notes
+### (1.9) Technical Notes
 
-1. Obsidian's internal linking uses `[[file_path]]` syntax
+1. Internal System References
+   - `[[system-config.json]]` in `01_SYSTEM/config`
+   - `[[process-logs.md]]` in `04_STORAGE/logs`
+   - `[[app-data.json]]` in `03_APPLICATIONS/user`
 
-   - Links should use the filename only (e.g., `[[01_ANALYSIS_BENCH]]`)
-   - Links to specific sections use hash notation (e.g., `[[01_ANALYSIS_BENCH#Standard Operations]]`)
-   - Links to timestamps in logs use full heading (e.g., `[[decisions_and_changes_log#2024-12-11_14-03]]`)
+2. Documentation Structure
+   - User guides in `00_MANUAL`
+   - System logs in `04_STORAGE/logs`
+   - Process documentation in `01_SYSTEM/processes`
+
+3. Obsidian's internal linking uses `[[file_path]]` syntax
+   - Links should use the filename only (e.g., `[[system-config.json]]`)
+   - Links to specific sections use hash notation (e.g., `[[process-logs.md#Error Handling]]`)
+   - Links to timestamps in logs use full heading (e.g., `[[decisions_and_changes_log#2024-12-13_19-47]]`)
    - Internal links relative to the current file should use `[[#section_name]]`
 
-2. Document Structure Standards
+4. Document Structure Standards
 
    - Files follow markdownlint standards
    - Headers use numerical prefixes (e.g., `# (1) Section Name`)
    - Proper nesting with no skipped levels
    - Single blank line between sections
 
-3. Template Variables
+5. Template Variables
 
    - Dates use format: `2024-12-11_14-06`
    - YAML variables use format: `{{VARIABLE}}`
    - No spaces in template variables
 
-4. Organization
+6. Organization
 
    - Folder and file numbering ensures proper ordering
    - Canvas files provide visual organization
    - Each workbench has dedicated responsibilities
    - Version control at document level
 
-5. AI Integration
+7. AI Integration
    - Consistent formatting improves AI parsing
    - Clear section boundaries aid in context understanding
    - Standardized structures enhance AI navigation
 
-### File Format Standards
+### (1.10) File Format Standards
 
-#### Document Types and Their Formats
+#### (1.10.1) Document Types and Their Formats
 
 1. **Human-Readable Documents (Markdown)**
 
@@ -225,7 +207,7 @@ The Factory metaphor is central to understanding this system. Each component rep
    - Configuration files (YAML)
    - Any data that needs to be parsed and processed by the factory system
 
-#### Format Selection Guidelines
+#### (1.10.2) Format Selection Guidelines
 
 - Use Markdown (.md) when:
 
@@ -240,7 +222,7 @@ The Factory metaphor is central to understanding this system. Each component rep
   - The data needs to be validated against a schema
   - The file is primarily for system/AI consumption
 
-### MCP-Obsidian Usage
+### (1.11) MCP-Obsidian Usage
 
 - `list_files_in_vault`: Lists all files and directories in the root directory of your Obsidian vault
 - `list_files_in_dir`: Lists all files and directories that exist in a specific Obsidian directory (note: empty directories are not returned)
@@ -250,7 +232,34 @@ The Factory metaphor is central to understanding this system. Each component rep
 - `append_content`: Adds content to new or existing files in the vault
 - `complex_search`: Executes advanced searches using JsonLogic queries, supporting pattern matching with 'glob' and 'regexp' operators ^c9v5kg
 
-### Embedded Images
+### (1.12) Markdown Standards
+
+1. Links and References
+   - Internal file links must use Obsidian double-bracket format `[[filename]]`
+   - Non-existent files must be wrapped in backticks when using double-brackets: `` `[[non-existent-file.md]]` ``
+   - Directory paths should be wrapped in inline code blocks: `` `directory/path` ``
+   - Never create internal links to directories, only to files
+   - External links must use markdown format [text](url)
+
+2. Document Structure
+   - Files must end with a single empty line
+   - No consecutive blank lines
+   - No trailing spaces at line ends
+   - Headers must use ATX style (# H1, ## H2, etc.)
+   - Headers must have space after #
+   - Headers must be surrounded by blank lines
+   - Headers must use numerical prefixes in parentheses
+   - No emojis in headers or section titles
+
+3. Lists and Code
+   - Lists must be preceded by blank line
+   - Lists must have consistent indentation (2 spaces)
+   - Must have space after list marker (-, *, or number)
+   - Code blocks must specify language
+   - Code blocks must use triple backticks
+   - Code blocks must be surrounded by blank lines
+
+### (1.13) Embedded Images from previous Factory System Metaphor
 
 ![[cv-prompting-evolved-obsidian-as-a-human-to-ai-agent-interface-v0.webp]]
 
@@ -264,11 +273,11 @@ The Factory metaphor is central to understanding this system. Each component rep
 
 ![[cv6-prompting-evolved-obsidian-as-a-human-to-ai-agent-interface-v0-ghzhs7tzk35e1.webp]]
 
-## Development Standards and Guidelines
+## (2) Development Standards and Guidelines
 
-### AI Interaction Guidelines
+### (2.1) AI Interaction Guidelines
 
-#### Role and Responsibilities
+#### (2.1.1) Role and Responsibilities
 
 The AI assistant is an expert programming assistant focusing on:
 
@@ -288,7 +297,7 @@ Key characteristics:
 - Maintains concise communication
 - Acknowledges uncertainty rather than guessing
 
-#### Mentorship Approach
+#### (2.1.2) Mentorship Approach
 
 The AI acts as a mentor/tutor for development best practices:
 
@@ -297,16 +306,16 @@ The AI acts as a mentor/tutor for development best practices:
 - Focuses on teaching methods and tools over solutions
 - Explains concepts using relatable examples
 
-#### Content Management Rules
+#### (2.1.3) Content Management Rules
 
 - Never remove unedited content from files
 - Avoid summarizing unchanged content as "[rest of file remains the same]"
 - Seek confirmation before any content deletion
 - Focus on updates and additions rather than deletions
 
-### Code Standards
+### (2.2) Code Standards
 
-#### Naming Conventions
+#### (2.2.1) Naming Conventions
 
 1. File and Component Names
 
@@ -321,31 +330,31 @@ The AI acts as a mentor/tutor for development best practices:
    - Types/Interfaces/Classes: PascalCase (`SeederState<T>`)
    - Use descriptive names indicating purpose
 
-#### TypeScript Guidelines
+#### (2.2.2) TypeScript Guidelines
 
-1. Type Safety
+##### (2.2.2.1) Best Practices for Typescript
 
-   - Use explicit return types
-   - Prefer types over interfaces
-   - Utilize generics for reusable components
-   - Avoid `any` - use `unknown` when uncertain
-   - Implement type guards for runtime checking
+- Use explicit return types
+- Prefer types over interfaces
+- Utilize generics for reusable components
+- Avoid `any` - use `unknown` when uncertain
+- Implement type guards for runtime checking
 
-2. Syntax Standards
+##### (2.2.2.2) Good Example of Formatting Standards
 
-   ```typescript
-   // Good example
-   const UserCard = ({ name, age }: UserProps) => {
-     const formattedName = `User: ${name}`;
-     return (
-       <div className="p-4">
-         {formattedName}
-       </div>
-     );
-   };
-   ```
+```typescript
+// Good example
+const UserCard = ({ name, age }: UserProps) => {
+  const formattedName = `User: ${name}`;
+  return (
+    <div className="p-4">
+      {formattedName}
+    </div>
+  );
+};
+```
 
-#### Formatting Rules
+#### (2.2.3) Code Formatting Rules
 
 1. Basic Formatting
 
@@ -451,6 +460,6 @@ Follow conventional commits:
 
 Example:
 
-````fish
-git commit -m 'feat: add responsive navbar with TailwindCSS'```
-````
+```fish
+git commit -m 'feat: add responsive navbar with TailwindCSS'
+```
