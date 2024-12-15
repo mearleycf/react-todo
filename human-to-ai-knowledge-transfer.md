@@ -1,14 +1,22 @@
-# THE COMPUTER SYSTEM
+# THE MIKEBOOK SYSTEM
 
 ## (1) Project Overview and Current Status
 
 ### (1.1) Core Concept
 
-The Human-AI Knowledge Transfer System is a sophisticated computing environment that serves as an intermediary between human users and AI agents. It provides a structured, familiar computing interface that both parties can understand and navigate, facilitating natural interaction and collaboration in software development tasks.
+The MikeBook System is a sophisticated computing environment that serves as an intermediary between human users and AI agents. Named as a play on MacBook, it provides a structured, familiar computing interface that both parties can understand and navigate, facilitating natural interaction and collaboration in software development tasks.
 
 ### (1.2) System Overview
 
-This knowledge management system transforms traditional documentation and development workflows into an intelligent computing environment where both human users and AI agents can work together effectively through a familiar computer system interface.
+MikeBook represents a complete computing ecosystem encompassing:
+
+- The physical hardware (MacBook)
+- The operating system and interfaces
+- The human user (you)
+- The AI agent (me)
+- All associated software, tools, and processes
+
+This comprehensive system transforms traditional documentation and development workflows into an intelligent computing environment where both human users and AI agents can work together effectively through a familiar computer system interface.
 
 ### (1.3) Implementation Progress
 
@@ -19,14 +27,16 @@ This knowledge management system transforms traditional documentation and develo
 - Implemented version control and documentation standards
 - Developed initial AI interaction patterns
 
-#### (1.3.2) Current Implementation Status
+#### (1.3.2) Current MikeBook Implementation Status
 
 1. Core Architecture
+
    - Created initial directory structure following computer system metaphor
    - Planned core system components (but not yet implemented)
    - Initial draft of configuration structure (needs implementation)
 
 2. User Interface Layer
+
    - Initial documentation of intended interaction patterns
    - Established markdown formatting standards
    - Created basic folder structure for user guides
@@ -102,7 +112,6 @@ This knowledge management system transforms traditional documentation and develo
    - Add detailed AI operation documentation for each type
 
 5. User Manual and Documentation:
-   - Create `00_MANUAL` directory for human-focused documentation
    - Develop comprehensive user guide with:
      - System overview and architecture diagrams
      - Detailed folder and file explanations
@@ -113,7 +122,7 @@ This knowledge management system transforms traditional documentation and develo
      - Mermaid/D2 diagrams for visual understanding
      - Cross-references to actual system components
      - Step-by-step tutorials with real examples
-   - Consider selective enhancement of factory files:
+   - Consider selective enhancement of system files:
      - Add contextual documentation where needed
      - Include explanatory comments for complex sections
      - Maintain balance between clarity and conciseness
@@ -148,17 +157,20 @@ The Computer metaphor is central to understanding this system. Each component re
 ### (1.9) Technical Notes
 
 1. Internal System References
-   - `[[system-config.json]]` in `01_SYSTEM/config`
+
+   - `[[mikebook-config.json]]` in `01_SYSTEM/config`
    - `[[process-logs.md]]` in `04_STORAGE/logs`
    - `[[app-data.json]]` in `03_APPLICATIONS/user`
 
 2. Documentation Structure
+
    - User guides in `00_MANUAL`
    - System logs in `04_STORAGE/logs`
    - Process documentation in `01_SYSTEM/processes`
 
 3. Obsidian's internal linking uses `[[file_path]]` syntax
-   - Links should use the filename only (e.g., `[[system-config.json]]`)
+
+   - Links should use the filename only (e.g., `[[mikebook-config.json]]`)
    - Links to specific sections use hash notation (e.g., `[[process-logs.md#Error Handling]]`)
    - Links to timestamps in logs use full heading (e.g., `[[decisions_and_changes_log#2024-12-13_19-47]]`)
    - Internal links relative to the current file should use `[[#section_name]]`
@@ -205,7 +217,7 @@ The Computer metaphor is central to understanding this system. Each component re
    - Status updates (JSON)
    - Metrics data (JSON)
    - Configuration files (YAML)
-   - Any data that needs to be parsed and processed by the factory system
+   - Any data that needs to be parsed and processed by the system
 
 #### (1.10.2) Format Selection Guidelines
 
@@ -217,7 +229,7 @@ The Computer metaphor is central to understanding this system. Each component re
 
 - Use JSON when:
 
-  - The data needs to be processed by the factory system
+  - The data needs to be processed by the system
   - The content is highly structured
   - The data needs to be validated against a schema
   - The file is primarily for system/AI consumption
@@ -235,6 +247,7 @@ The Computer metaphor is central to understanding this system. Each component re
 ### (1.12) Markdown Standards
 
 1. Links and References
+
    - Internal file links must use Obsidian double-bracket format `[[filename]]`
    - Non-existent files must be wrapped in backticks when using double-brackets: `` `[[non-existent-file.md]]` ``
    - Directory paths should be wrapped in inline code blocks: `` `directory/path` ``
@@ -242,6 +255,7 @@ The Computer metaphor is central to understanding this system. Each component re
    - External links must use markdown format [text](url)
 
 2. Document Structure
+
    - Files must end with a single empty line
    - No consecutive blank lines
    - No trailing spaces at line ends
@@ -254,7 +268,7 @@ The Computer metaphor is central to understanding this system. Each component re
 3. Lists and Code
    - Lists must be preceded by blank line
    - Lists must have consistent indentation (2 spaces)
-   - Must have space after list marker (-, *, or number)
+   - Must have space after list marker (-, \*, or number)
    - Code blocks must specify language
    - Code blocks must use triple backticks
    - Code blocks must be surrounded by blank lines
