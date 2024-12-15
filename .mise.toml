@@ -1,4 +1,4 @@
 [tools]
-python = {version='3.13.1', virtualenv='.venv'}
+python = { version = "latest", virtualenv = ".venv" }
 node = "22.9.0"
 tuist = "latest"
