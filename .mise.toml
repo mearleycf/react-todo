@@ -1,0 +1,4 @@
+[tools]
+python = { version = "latest", virtualenv = ".venv" }
+node = "22.9.0"
+tuist = "latest"
